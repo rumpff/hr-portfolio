@@ -1,0 +1,64 @@
+:root {
+    --color-outside: #1e90ff;
+    --color-inside: #fef0ff;
+  }
+  
+  body {
+    font-family: Mont;
+    background-color: #0c0c0c;
+    color: #f0f0f0;
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: 900;
+  }
+  
+  .profile {
+    margin: 0 auto;
+    width: 30vw;
+    color: #0c0c0c;
+    
+    background-color: var(--color-inside);
+    
+    border-style: solid;
+    border-color: var(--color-outside);
+    border-width: 1em;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .profile-image {
+    width: 100%;
+  }
+  
+  .name {
+      text-align: center;
+      font-style: italic;
+  }
+  
+  .skills {
+    padding: 0 1em;
+  }
+  
+  .email {
+    background-color: var(--color-outside);
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+    
+    
+  }
+  
+  .email a { 
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: font-size 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color:blue;
+  }
+  
+  .email a:hover {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    overflow: visible;
+  }
