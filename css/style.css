@@ -24,7 +24,7 @@
     border-style: solid;
     border-color: var(--color-outside);
     border-width: 1em;
-    border-radius: 10px;
+    border-radius: 50%;
     overflow: hidden;
   }
   
