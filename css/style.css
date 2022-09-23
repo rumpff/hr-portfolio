@@ -1,64 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+
 :root {
-    --color-outside: #1e90ff;
-    --color-inside: #fef0ff;
+  --color-outside: #1e90ff;
+  --color-inside: #fef0ff;
+}
+
+@keyframes bounce {
+  from, to {
+    transform: none;
+    -webkit-transform: none;
+
+    /* Ease In */
+    animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    -webkit-transform: none;
   }
-  
-  body {
-    font-family: Mont;
-    background-color: #0c0c0c;
-    color: #f0f0f0;
-  }
-  
-  h1 {
-    font-size: 32px;
-    font-weight: 900;
-  }
-  
-  .profile {
-    margin: 0 auto;
-    width: 30vw;
-    color: #0c0c0c;
+  50% {
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
     
-    background-color: var(--color-inside);
-    
-    border-style: solid;
-    border-color: var(--color-outside);
-    border-width: 1em;
-    border-radius: 50%;
-    overflow: hidden;
+    /* Ease Out */
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
   }
+}
   
-  .profile-image {
-    width: 100%;
-  }
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0c0c0c;
+  color: #f0f0f0;
+  margin: 0px;
+}
+
+header {
+  background-color: blue;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content > section {
+  margin: 0 5em;
+}
+
+.header-content .title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: right;
+}
+
+.header-content .title-container h1 {
+  font-size: 6em;
+  margin-bottom: 5px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.header-content .title-container h2 {
+  font-size: 4em;
+  margin-top: 5px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.header-content .title-container .button {
+  text-align: right;
+}
+
+.header-content .image-container img {
+  border-radius: 50%;
+}
+
+header .scroll-arrow {
+  margin-top: 8em;
+
   
-  .name {
-      text-align: center;
-      font-style: italic;
-  }
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
   
-  .skills {
-    padding: 0 1em;
-  }
-  
-  .email {
-    background-color: var(--color-outside);
-    padding: 1em;
-    text-align: center;
-    font-weight: bold;
-    
-    
-  }
-  
-  .email a { 
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      transition: font-size 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-  color:blue;
-  }
-  
-  .email a:hover {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    overflow: visible;
-  }
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+header .scroll-arrow i {
+  font-size: 4em;
+}
+
+.page-container {
+  max-width: 70vw;
+  margin: 0 auto;
+}
